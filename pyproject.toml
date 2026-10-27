@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lolither-aligncite"
+version = "0.1.0"
+description = "把回答拆成断言，逐条在检索片段中找支撑句，标出无支撑的断言"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "lolither" }]
+keywords = ["analysis", "observability", "evaluation", "rag"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://lolither.github.io"
+Repository = "https://github.com/lolither/aligncite"
+Issues = "https://github.com/lolither/aligncite/issues"
+
+[project.scripts]
+aligncite = "aligncite:main"
+
+[tool.setuptools]
+py-modules = ["aligncite"]
